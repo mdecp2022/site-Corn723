@@ -29,6 +29,32 @@ num = 5
 # 利用 for 重複迴圈與 range() 變數, 列印出 (利用 print() 函式) 已經隨機排列次序的 stud 數列的最前面 num 個學號值
 for i in range(num):
     print(stud[i])</pre>
+<p></p>
+<p><a href="https://mdecp2022.github.io/site-Corn723/content/Brython.html?src=https://gist.githubusercontent.com/Corn723/9a3df1d9712f16ff04d6670c7706e4ac/raw/2114e075c7da4a50b20ef3f6b73f68d0ecb899c2/1a">1a 學員</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import document, html
+
+brython_div1 = document["brython_div2"]
+"""
+brython_div1 &lt;= html.BUTTON("hello")
+brython_div1 &lt;= html.BR()
+brython_div1 &lt;= html.A("google", href="https://google.com")
+"""
+
+url = "https://mde.tw/studlist/2022fall/1a.txt"
+data = open(url).read().split("\n")
+mdecp2022 = "https://mdecp2022.github.io/site-"
+data = data[1:-1]
+for i in data:
+    stud = i.split("\t")
+    stud_num = stud[0]
+    github_acc = stud[1]
+    #print(stud_num, github_acc)
+    if github_acc == "":
+        github_acc = stud_num
+    site = mdecp2022 + github_acc
+    link = html.A(stud_num, href=site)
+    brython_div1 &lt;= link
+    brython_div1 &lt;= html.BR()</pre>
 <p></p><h2>w13</h2>
 <p>溫度轉換程式</p>
 <p>f = c*9/5 + 32<br/>c = (f-32)*5/9</p>
