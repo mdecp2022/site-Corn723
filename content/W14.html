@@ -2,7 +2,7 @@
         <head>
         <title>cmsite</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -141,8 +141,46 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <a href='W14.html'>Next</a> >> W14<br /><h1>HW</h1>
-<br />About << <a href='About.html'>Previous</a> <a href='W14.html'>Next</a> >> W14</div>
+    <div id="tipue_search_content">HW << <a href='HW.html'>Previous</a> <a href='W6.html'>Next</a> >> W6<br /><h1>W14</h1>
+<!-- 
+在動態網站頁面中啟用 Brython 執行環境的用法, 請注意動態網站執行所在路徑
+-->
+<script src="./../cmsimde/static/brython.js"></script>
+<script src="./../cmsimde/static/brython_stdlib.js"></script>
+<!-- 啟動 Brython -->
+<p>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['./../cmsimde/static/','/downloads/py/']});
+}
+</script>
+</p>
+<!-- 利用 html 建立一個 id="btn1" 的按鈕 -->
+<p><button id="btn1">取使用者輸入</button></p>
+<div id="brython_div"></div>
+<p>
+<script type="text/python">
+from browser import html, document
+# Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+#user_input_temp = input("請輸入攝氏溫度值:")
+# 接著列出 user_input_temp 變數的資料型別
+# 但是在頁面中 Brython 的 print() 將會顯示在 log 而非頁面
+#print(type(user_input_temp))
+# 這裡定義一個 brython_div 變數, 透過 document[] 與頁面中 id="brython_div" 的位置對應
+brython_div = document["brython_div"]
+# 看能不能直接將變數值字串列在標註 id 為 "brython_div" 的頁面位置
+#brython_div <= user_input_temp
+# 之後若要列出 html, 則需要透過 Brython 的 html 模組
+# 接下來要設法按下按鈕之後才執行取使用者 input 的流程
+# 首先 comment 掉前面的 input() 與 print(), 同時蓋掉輸出, 並利用事件導向設計一個函式
+def get_input(env):
+    user_input_temp = input("請輸入攝氏溫度值:")
+    brython_div <= user_input_temp
+# 透過 Brython browser 模組中的 document 物件將 id="btn1" 的物件中的 bind() 方法
+# 讓使用者 click 後會經由瀏覽器中的 event 通知執行 get_input 函式
+document["btn1"].bind('click', get_input)
+</script>
+</p><br />HW << <a href='HW.html'>Previous</a> <a href='W6.html'>Next</a> >> W6</div>
         
     <!-- footer -->
       <div class="container">
