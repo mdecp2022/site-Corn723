@@ -130,7 +130,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='HW.html'>HW</a><ul class='dropdown'><li><a href='W14.html'>W14</a><li><a href='W6.html'>W6</a><li><a href='w13.html'>w13</a><li><a href='w12.html'>w12</a></li></ul><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='HW.html'>HW</a><ul class='dropdown'><li><a href='w15.html'>w15</a><li><a href='W14.html'>W14</a><li><a href='w13.html'>w13</a><li><a href='w12.html'>w12</a><li><a href='W6.html'>W6</a></li></ul><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -141,7 +141,8 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">HW << <a href='HW.html'>Previous</a> <a href='W6.html'>Next</a> >> W6<br /><h1>W14</h1>
+    <div id="tipue_search_content">w15 << <a href='w15.html'>Previous</a> <a href='w13.html'>Next</a> >> w13<br /><h1>W14</h1>
+<p>這是按鈕，輸入甚麼數字就會跑出來</p>
 <!-- 
 在動態網站頁面中啟用 Brython 執行環境的用法, 請注意動態網站執行所在路徑
 -->
@@ -158,6 +159,7 @@ brython({debug:1, pythonpath:['./../cmsimde/static/','/downloads/py/']});
 <!-- 利用 html 建立一個 id="btn1" 的按鈕 -->
 <p><button id="btn1">取使用者輸入</button></p>
 <div id="brython_div"></div>
+<div>我學會了新增按鈕</div>
 <p>
 <script type="text/python">
 from browser import html, document
@@ -180,7 +182,7 @@ def get_input(env):
 # 讓使用者 click 後會經由瀏覽器中的 event 通知執行 get_input 函式
 document["btn1"].bind('click', get_input)
 </script>
-</p><br />HW << <a href='HW.html'>Previous</a> <a href='W6.html'>Next</a> >> W6</div>
+</p><br />w15 << <a href='w15.html'>Previous</a> <a href='w13.html'>Next</a> >> w13</div>
         
     <!-- footer -->
       <div class="container">
