@@ -417,6 +417,39 @@ for i in data:
 <p>看完W6，我思考了一下，我不會結合抽點及列出靜態網站</p>
 <p></p>
 <h2>W5</h2>
+<p><a href="https://mdecp2022.github.io/site-Corn723/content/Brython.html?src=https://gist.githubusercontent.com/Corn723/50226c1b96bcf52f5048b898f8611e6e/raw/b6e8d9c6327b7c11e2f359b2ae48ba9834112886/W5%2520hw">密碼亂數</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 導入亂數模組
+import random
+# 導入字串模組
+import string
+# 利用 def 關鍵字定義函式
+# 函式的輸入變數可以設定初始值
+def password_generator(size=4, chars=string.ascii_lowercase + string.digits):
+    # 函式內以多行註解說明函式功能
+    """Generate random password
+    """
+    # 利用 return 關鍵字將所產生的亂數字串傳回
+    return ''.join(random.choice(chars) for _ in range(size))
+# 建立一個變數與隨後的字串對應
+pass_string = "abcdefghkmnpqrstuwxyz123456789"
+cp_num = ["0747", "0761"]
+cad_num = ["0773", "0786"]
+def gen_acc_pass(course, course_num):
+    stud_list =[]
+    for num in course_num:
+        url = "https://nfu.cycu.org/?semester=1111&amp;courseno=" + num + "&amp;column=True"
+        class_list = open(url).read().split("\n")[:-1]
+        stud_list += class_list
+        #print(stud_list)
+    for stud_num in stud_list:
+        password = password_generator(4, pass_string)
+        #print(password)
+        account = course + stud_num
+        #print(account)
+        print(stud_num + "\t" + account + "\t" + password)
+gen_acc_pass("cp", cp_num)
+gen_acc_pass("cad", cad_num)</pre>
+<p></p>
 <p></p>
 <h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
