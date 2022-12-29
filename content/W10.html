@@ -142,51 +142,8 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">w12 << <a href='w12.html'>Previous</a> <a href='W6.html'>Next</a> >> W6<br /><h1>W10</h1>
-<p><a href="https://mdecp2022.github.io/site-Corn723/content/Brython.html?src=https://gist.githubusercontent.com/Corn723/3f4c4293dd255655a1aeac3715b66891/raw/13e0d1d5a999a4c1fc2c9faf99bdac9f2f7de3ae/w10-1">列出缺考名單及分數</a></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import ast
- 
-# get stud_list first
- 
-def get_stud(c_name):
-    courses = {"1a": "0747", "1b": "0761", "2a": "0773", "2b": "0786"}
-    #c_name = "1b"
-    c = courses[c_name]
-    url = "https://nfu.cycu.org/?semester=1111&amp;courseno=" + c + "&amp;column=True"
-    data = open(url).read().split("\n")
-    stud = data[:-1]
-    return stud
-     
-cp_stud = get_stud("1b")
- 
-# get w10 quiz result
-cp_w10_quiz_url = "https://gist.githubusercontent.com/mdecycu/9df4b372ac1b7386cf259ced15f1a2b2/raw/a6825f13b1bb0b61e09e74dd117729eefe1d947f/20221110_cp1b_w10_quiz.json"
- 
-def get_score(url):
-    json_data = open(url).read()
-    big_dict = ast.literal_eval(json_data)
-    data = big_dict["body"]["testuser"]
-    quiz_dict = {}
-    for i in data:
-        stud_id = data[i]["user_name"]
-        stud_score = int(float(data[i]["total_score"]))
-        quiz_dict[stud_id] = stud_score
-    return quiz_dict
-     
-cp_quiz = get_score(cp_w10_quiz_url)
-cp_abs = []
-for stud in cp_stud:
-    try:
-        print(stud, cp_quiz[stud])
-    except:
-        # 缺考者沒有 quiz 成績
-        print(stud, "缺")
-        cp_abs.append(stud)
-# 列出缺考名單
-print("="*20)
-print("以下為 w10 缺考名單:")
-for stud in cp_abs:
-    print(stud)</pre>
-<p><a href="https://mdecp2022.github.io/site-Corn723/content/Brython.html?src=https://gist.githubusercontent.com/Corn723/3f4c4293dd255655a1aeac3715b66891/raw/13e0d1d5a999a4c1fc2c9faf99bdac9f2f7de3ae/w10-2">HW W10-2 (for迴圈)</a></p>
+<p></p>
+<p><a href="https://mdecp2022.github.io/site-Corn723/content/Brython.html?src=https://gist.githubusercontent.com/Corn723/3f4c4293dd255655a1aeac3715b66891/raw/13e0d1d5a999a4c1fc2c9faf99bdac9f2f7de3ae/w10-2">HW W10(for迴圈)</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">A = [i for i in range(1,10,2)]
 print(A)</pre>
 <p>我對於for迴圈有更深的理解了</p>
