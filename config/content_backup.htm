@@ -1,7 +1,16 @@
 <h1>About</h1>
 <p>我的倉儲:<a href="https://github.com/mdecp2022/site-Corn723">https://github.com/mdecp2022/site-Corn723</a></p>
-<p>cmsite: wcms use <a href="https://github.com/mdecycu/cmsimde">https://github.com/mdecycu/cmsimde</a> as submodule</p><h1>HW</h1>
-<h2>w15</h2>
+<p>cmsite: wcms use <a href="https://github.com/mdecycu/cmsimde">https://github.com/mdecycu/cmsimde</a> as submodule</p>
+<h1>HW</h1>
+<h2>W17</h2>
+<p></p>
+<p>以下為自己打的&lt;定義程式與呼叫&gt;的程式</p>
+<p>是輸入cm轉成inch的程式</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def cm_to_inch(cm):
+    inch=cm*2.54
+    print(inch)
+cm_to_inch(10)</pre>
+<p></p><h2>w15</h2>
 <div>
 <ul>
 <li><strong>為何學習計算機程式需要建立個人倉儲?</strong></li>
@@ -25,7 +34,7 @@
 <p></p>
 </div>
 <h3>w15-綠色方塊</h3>
-<!-- 納入 Brython 環境 -->
+<br/><!-- 納入 Brython 環境 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
 <!-- 啟動 Brython -->
@@ -38,7 +47,7 @@ brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
 <!-- 給定 brython_div1 division 標註 --></p>
 <p>以下是繞8字形行走的綠色小方塊</p>
 <div id="brython_div1"></div>
-<!-- 加入啟動按鈕後的 Rect 行走程式原始碼 -->
+<br/><!-- 加入啟動按鈕後的 Rect 行走程式原始碼 -->
 <script type="text/python">
 # 這個程式用於 demo 綠色方塊沿著特定網格路徑行走
 # 從 Brython 程式庫中的 browser 模組導入 document 類別, 並以簡寫設定為 doc
@@ -235,7 +244,7 @@ doc["power"].bind("click", launchAnimation)
 <p>這周我學會了如何更改綠色小方塊的行動路徑</p>
 <h2>W14</h2>
 <p>這是按鈕，輸入甚麼數字就會跑出來</p>
-<!-- 
+<br/><!-- 
 在動態網站頁面中啟用 Brython 執行環境的用法, 請注意動態網站執行所在路徑
 -->
 <script src="/static/brython.js"></script>
@@ -274,7 +283,8 @@ def get_input(env):
 # 讓使用者 click 後會經由瀏覽器中的 event 通知執行 get_input 函式
 document["btn1"].bind('click', get_input)
 </script>
-</p><h2>w13</h2>
+</p>
+<h2>w13</h2>
 <p>溫度轉換程式</p>
 <p>f = c*9/5 + 32<br/>c = (f-32)*5/9</p>
 <p></p>
@@ -317,7 +327,8 @@ print(A)</pre>
 <p>我對於for迴圈有更深的理解了</p>
 <p>第一個數字代表初始值</p>
 <p>第二個數字代表最後的值</p>
-<p>第三個數字代表初始值一次+多少數值</p><h2>W6</h2>
+<p>第三個數字代表初始值一次+多少數值</p>
+<h2>W6</h2>
 <p><a href="https://mdecp2022.github.io/site-Corn723/content/Brython.html?src=https://gist.githubusercontent.com/Corn723/9a3df1d9712f16ff04d6670c7706e4ac/raw/433ba438d540fb96f02ff2c8d1b85bfee920a042/1a%2520%25E6%258A%25BD%25E4%25BA%2594%25E5%2580%258B">抽點程式</a>    抽點五個</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># Python 的註解分為單行註解與多行, 單行註解可在字串前方放入 #
 '''多行註解則可以透過三個單引號前後標註字串或文字段落內容, 
@@ -424,7 +435,9 @@ gen_acc_pass("cad", cad_num)</pre>
 <p>W13:教學github token、溫度轉換程式，並布置作業。進度都有跟上，作業也有完成。</p>
 <p>W14:教學如何在個人網站中加入按鈕。進度都有跟上，作業也有完成，但是程式看不太懂。</p>
 <p>W15:教學如何在 Brython 中繪製繪圖布並加入綠色方塊且布置作業。作業我成功修改了綠色方塊的移動軌跡，挺好玩的。</p>
-<p>W16:確認自評分數。我對於自身的表現評了一個分數及輸入我所做的作業周次還有維護次數。</p><h1>Brython</h1>
+<p>W16:確認自評分數。我對於自身的表現評了一個分數及輸入我所做的作業周次還有維護次數。</p>
+<p>W17:上台介紹自己的靜態網站。我學會了定義函數。</p>
+<h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
@@ -589,7 +602,9 @@ doc["add1to100"].bind('click', add)
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div1 作為切入位置 --></p>
 <div id="brython_div1"></div>
-<!-- editor1 結束 --><hr/><!-- ########################################## -->
+<!-- editor1 結束 -->
+<hr/>
+<!-- ########################################## -->
 <p>從 1 累加到 100 part2:</p>
 <p><button id="add1to100part2">1 add to 100</button><button id="cango_three_gears">cango_three_gears</button><button id="bsnake">BSnake</button><button id="aitetris">AI Tetris</button></p>
 <p><!-- 請注意, 這裡使用 Javascript 將 localStorage["kw_py_src2"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
@@ -703,4 +718,5 @@ doc["aitetris"].bind("click", aitetris.do)
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console2"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div1 作為切入位置 --></p>
 <div id="brython_div2"></div>
-<!-- editor2 結束 --><hr/>
+<!-- editor2 結束 -->
+<hr/>
